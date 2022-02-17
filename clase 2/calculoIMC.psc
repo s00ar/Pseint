@@ -1,5 +1,5 @@
 Algoritmo CalculoIMC
-	Definir estatura, peso Como Real
+	Definir estatura, peso, resultado Como Real
 	Definir resp Como Caracter
 	Definir salir Como Logico
 	// REPETICIÓN PARA QUE TODO EL PROGRAMA SE EJECUTE HASTA LA ÓRDEN DE SALIR
@@ -51,17 +51,22 @@ Algoritmo CalculoIMC
 	//CALCULO Y DEVOLUCIÓN A USUARIO
 		Limpiar Pantalla
 		resultado =  peso / (estatura * estatura)
-		Si resultado>24.9 Entonces
+		Si resultado>30 Entonces
+			Escribir "***********************************"	
+			Escribir "*         Tienes obesidad         *"
+			Escribir "***********************************"	
+		FinSi
+		Si resultado>25 y resultado<29.9 Entonces
 			Escribir "***********************************"	
 			Escribir "*         Tienes sobrepeso        *"
 			Escribir "***********************************"	
-			FinSi
-			Si resultado<24.9 y resultado>18.4 Entonces
+		FinSi
+		Si resultado<24.9 y resultado>18.5 Entonces
 			Escribir "***********************************"	
 			escribir "*      Estas en tu peso ideal     *"
 			Escribir "***********************************"	
-			FinSi
-			Si resultado<18.4 Entonces
+		FinSi
+		Si resultado<18.4 Entonces
 			Escribir "***********************************"	
 			Escribir "*Estas por debajo de tu peso ideal*"
 			Escribir "***********************************"	
